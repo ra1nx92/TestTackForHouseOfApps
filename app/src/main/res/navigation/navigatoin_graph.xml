@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigatoin_graph"
+    app:startDestination="@id/postsFragment">
+
+    <fragment
+        android:id="@+id/postsFragment"
+        android:name="com.example.testtackforhouseofapps.presentation.screen.PostsFragment"
+        android:label="Posts"
+        tools:layout="@layout/fragment_posts">
+        <action
+            android:id="@+id/action_postsFragment_to_postsAndCommentsFragment"
+            app:destination="@id/postsAndCommentsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/postsAndCommentsFragment"
+        android:name="com.example.testtackforhouseofapps.presentation.screen.PostsAndCommentsFragment"
+        android:label="Posts And Comments"
+        tools:layout="@layout/fragment_posts_and_comments" />
+    <fragment
+        android:id="@+id/albumsFragment"
+        android:name="com.example.testtackforhouseofapps.presentation.screen.AlbumsFragment"
+        android:label="Albums"
+        tools:layout="@layout/fragment_albums" />
+</navigation>
